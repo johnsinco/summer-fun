@@ -15,4 +15,11 @@ router.get('/:id', function(req, res, next) {
   })
 })
 
+router.get('/:id/challenges', function(req, res, next) {
+  res.json([
+    {id: 1, name: 'Read 10 books', status: 'in progress'},
+    {id: 2, name: 'Hike a Fourteener', status: 'complete'}
+  ])
+}))
+
 module.exports = router;
