@@ -16,8 +16,16 @@ like book it!
 #### Players
 Players are participants, ie the kids. they have a name and activities
 - GET/POST/PUT/DELETE /players
+- GET /player/{id}  -- player by id
 
-GET /player/{id}  -- player by id
-POST /player/{id}/challenges -- add a challenge to a player
-GET /player/{id}/challenges -- get all player challenges
-PUT /player{id}/challenge/{id} -- update progress for a challenge
+#### Challenges
+Challenges are activities the kids try to complete to earn points
+- POST /player/{id}/challenges -- add a challenge to a player
+- GET /player/{id}/challenges -- get all player challenges
+- PUT /player/{id}/challenge/{id} -- update progress for a challenge
+
+#### Organization
+The org the parents signed up thru has a list of players and leaderboard
+- GET/POST/PUT/DELETE /org
+- GET /org/{id}/players
+- GET /org/{id}/leaderboard
