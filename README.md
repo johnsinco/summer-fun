@@ -19,7 +19,7 @@ Players are participants, ie the kids. they have a name and activities
 - GET /player/{id}  -- player by id
 
 #### Challenges
-Challenges are activities the kids try to complete to earn points
+Challenges are activities the kids complete to earn points
 - POST /player/{id}/challenges -- add a challenge to a player
 - GET /player/{id}/challenges -- get all player challenges
 - PUT /player/{id}/challenge/{id} -- update progress for a challenge
