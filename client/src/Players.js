@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
+import PlayerDetail from './PlayerDetail'
 
 class Players extends Component {
 
   state = {players: []}
 
-  componentDidMount() {
+  componentWillMount() {
     fetch('/players')
       .then(res => res.json())
       .then(players => this.setState({ players }));
@@ -28,31 +29,20 @@ class Players extends Component {
             </ul>
           </div>
         )}/>
-        <Route path='/players/:id' render={(props) => (
-          <div className="players">
-            <header className="players-header">
-              <h3 className="players-title">Player Detail</h3>
-            </header>
-            <div>
-              {this.showPlayer(props.match.params.id)}
-            </div>
-          </div>
-        )}/>
+        <Route path='/players/:id' component={PlayerDetail} />
       </Switch>
 
     );
   }
 
   showPlayer(id) {
+
     var player = this.state.players.find(p => (parseInt(id) === p.id))
     if(player === undefined) {
       return(
         <div>Player Not Found</div>
       )
     }
-    console.log('000000000='+id)
-    console.log(player)
-    console.log('11111')
     return(
       <div className="playerDetail">
         {player.firstName} {player.lastName}

@@ -18,9 +18,11 @@ class Challenges extends Component {
           {this.state.challenges.map(c =>
             <li>
               {c.name}
+              <span><button>Edit</button>|<button>Delete</button></span>
             </li>
           )}
         </ul>
+        <button>Add</button>
       </div>
     );
   }
