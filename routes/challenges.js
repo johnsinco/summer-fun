@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.json([
     {id: 1, name: "Read 10 hours"},
-    {id: 2, name: "Hike 5 miles"},
+    {id: 2, name: "Hike 5 miles"}
   ]);
 });
 
