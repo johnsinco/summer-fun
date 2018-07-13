@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 
 class Players extends Component {
 
@@ -19,9 +19,13 @@ class Players extends Component {
             <header className="players-header">
               <h3 className="players-title">All Players</h3>
             </header>
+            <ul>
               {this.state.players.map(player =>
-                <div key={player.id}>{player.firstName} {player.lastName}</div>
+                <li>
+                  <Link to={`/players/${player.id}`}>{player.firstName} {player.lastName}</Link>
+                </li>
               )}
+            </ul>
           </div>
         )}/>
         <Route path='/players/:id' render={(props) => (
