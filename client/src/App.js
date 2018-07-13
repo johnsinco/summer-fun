@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Players from './Players'
+import Home from './Home'
 
 class App extends Component {
-
-  state = {players: []}
-
-  componentDidMount() {
-    fetch('/players')
-      .then(res => res.json())
-      .then(players => this.setState({ players }));
-  }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">All Players</h1>
+        <header>
+          <h1>Summer Fun!</h1>
         </header>
-          {this.state.players.map(player =>
-            <div key={player.id}>{player.firstName} {player.lastName}</div>
-          )}
+        <BrowserRouter>
+          <div>
+            <Route exact path='/' component={Home}/>
+            <Route path='/players' component={Players}/>
+          </div>
+        </BrowserRouter>
       </div>
-    );
+    )
   }
 }
 
