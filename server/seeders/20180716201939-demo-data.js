@@ -23,7 +23,7 @@ module.exports = {
           updatedAt: Sequelize.literal('NOW()'),
           lastName: 'Grohl',
           accountId: 2
-        },
+        }
       ], {});
   },
 

@@ -5,13 +5,15 @@ module.exports = {
     return queryInterface.bulkInsert('Accounts', [
       {
         username: 'foo',
-        password: 'bar',
-        org_id: 1
-      },
+        pasword: 'bar',
+        'org_id': 1,
+        createdAt: Sequelize.literal('NOW()'),
+        updatedAt: Sequelize.literal('NOW()')
+      }
     ], {});
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Players', null, {});
+    return queryInterface.bulkDelete('Accounts', null, {});
   }
 };
