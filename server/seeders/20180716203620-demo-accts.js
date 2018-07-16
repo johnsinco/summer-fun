@@ -6,7 +6,7 @@ module.exports = {
       {
         username: 'foo',
         pasword: 'bar',
-        'org_id': 1,
+        org_id: 1,
         createdAt: Sequelize.literal('NOW()'),
         updatedAt: Sequelize.literal('NOW()')
       }
