@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "js",
+    "password": null,
+    "database": "summer-fun-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "js",
+    "password": null,
+    "database": "summer-fun-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "js",
+    "password": null,
+    "database": "summer-fun-prod",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
