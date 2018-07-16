@@ -3,13 +3,16 @@ import { Switch, Route, Link } from 'react-router-dom'
 
 class PlayerDetail extends Component {
 
-  state = {player: {}}
+  state = {player: {}, challenges: []}
 
   componentWillMount() {
     var pid = this.props.match.params.id
     fetch("/players/"+pid)
       .then(res => res.json())
       .then(player => this.setState({ player }));
+    fetch("/players/"+pid+"/challenges")
+      .then(res => res.json())
+      .then(challenges => this.setState({ challenges }));
   }
 
   render() {
@@ -21,6 +24,13 @@ class PlayerDetail extends Component {
         </header>
         <div className="playerDetail">
           {player.firstName} {player.lastName}
+        </div>
+        <div className="playerChallenges">
+          <ul>
+          {this.state.challenges.map(c =>
+            <li> {c.name} </li>
+          )}
+          </ul>
         </div>
       </div>
     );
