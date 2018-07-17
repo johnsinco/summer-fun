@@ -24,10 +24,13 @@ class EditPlayer extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    const data = new FormData(event.target);
+    console.log(event.target)
+    const data = this.state
+    console.log(data)
     fetch('/players', {
       method: 'POST',
-      body: data,
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" }
     }).then(res => console.log(res))
   }
 

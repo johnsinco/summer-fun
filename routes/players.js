@@ -8,14 +8,16 @@ router.get('/', function(req, res, next) {
     .all()
     .then(players => res.json(players))
     .catch(err => res.status(500).send(err))
-  // res.json([
-  //   {id: 1, firstName: "Jane", lastName: "Doe", accountId: 7},
-  //   {id: 2, firstName: "Bill", lastName: "Baggins", accountId: 12}
-  // ]);
 });
 
 router.post('/', function(req, res, next) {
-  res.status(201).send('created')
+  console.log(req.body)
+  return Player.create({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName
+  })
+  .then(newPlayer => res.status(201).json(newPlayer))
+  .catch(error => res.status(500).send(error));
 });
 
 router.get('/:id', function(req, res, next) {
