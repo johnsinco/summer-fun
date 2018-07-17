@@ -31,7 +31,6 @@ class Players extends Component {
         )}/>
         <Route path='/players/:id' component={PlayerDetail} />
       </Switch>
-
     );
   }
 
