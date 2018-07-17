@@ -21,9 +21,14 @@ class EditPlayer extends React.Component {
       [name]: value
     });
   }
+
   handleSubmit(event) {
-    console.log(this.state);
-    event.preventDefault();
+    event.preventDefault()
+    const data = new FormData(event.target);
+    fetch('/players', {
+      method: 'POST',
+      body: data,
+    }).then(res => console.log(res))
   }
 
   render() {
@@ -51,5 +56,7 @@ class EditPlayer extends React.Component {
     );
   }
 }
+
+
 
 export default EditPlayer
