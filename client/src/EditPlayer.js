@@ -12,6 +12,16 @@ class EditPlayer extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillMount() {
+    var pid = this.props.match.params.id
+    if(pid !== undefined) {
+      fetch("/players/"+pid)
+      .then(res => res.json())
+      .then(player => this.setState({ firstName: player.firstName, lastName: player.lastName }));
+    }
+  }
+
+
   handleInputChange(event) {
     const target = event.target;
     const value = target.value;
@@ -31,7 +41,7 @@ class EditPlayer extends React.Component {
       method: 'POST',
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }
-    }).then(res => console.log(res))
+    }).then(res.json()).then(res => console.log(res))
   }
 
   render() {

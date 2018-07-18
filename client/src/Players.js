@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
 import PlayerDetail from './PlayerDetail'
+import EditPlayer from './EditPlayer'
 
 class Players extends Component {
 
@@ -29,6 +30,7 @@ class Players extends Component {
             </ul>
           </div>
         )}/>
+        <Route path='/players/:id/edit' component={EditPlayer} />
         <Route path='/players/:id' component={PlayerDetail} />
       </Switch>
     );

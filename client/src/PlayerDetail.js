@@ -25,6 +25,7 @@ class PlayerDetail extends Component {
         <div className="playerDetail">
           {player.firstName} {player.lastName}
         </div>
+        <Link to={`/players/${player.id}/edit`}>edit</Link>
         <div className="playerChallenges">
           <ul>
           {this.state.challenges.map(c =>
