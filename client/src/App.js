@@ -3,6 +3,7 @@ import { BrowserRouter,  Route } from 'react-router-dom'
 import Players from './Players'
 import EditPlayer from './EditPlayer'
 import Challenges from './Challenges'
+import Register from './Register'
 import Home from './Home'
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path='/players' component={Players}/>
             <Route path='/players/new' component={EditPlayer}/>
             <Route path='/challenges' component={Challenges}/>
+            <Route path='/register' component={Register}/>
           </div>
         </BrowserRouter>
       </div>
