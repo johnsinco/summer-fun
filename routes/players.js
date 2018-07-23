@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const Player = require('../server/models').Player;
+const Player = require('../models').Player;
 
 /* GET players listing. */
 router.get('/', function(req, res, next) {

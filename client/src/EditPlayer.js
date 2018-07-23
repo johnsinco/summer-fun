@@ -41,7 +41,7 @@ class EditPlayer extends React.Component {
       method: 'POST',
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }
-    }).then(res.json()).then(res => console.log(res))
+    }).then(res => res.json()).then(res => console.log(res))
   }
 
   render() {
