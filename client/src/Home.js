@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
 import ScrollableAnchor from 'react-scrollable-anchor'
+import Background from './images/homepage_bg.png';
 
 class Home extends Component {
 
@@ -19,7 +20,7 @@ class Home extends Component {
           </div>
       </div>
 
-      <div className="splash-container">
+      <div className="splash-container" style={{backgroundImage: `url(${Background})`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`}}>
           <div className="splash">
             <ScrollableAnchor id={'home'}>
               <h1 className="splash-head">SUMMER FUN!</h1>
