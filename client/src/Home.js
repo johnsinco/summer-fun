@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 class Home extends Component {
 
@@ -11,16 +12,18 @@ class Home extends Component {
               <a className="pure-menu-heading" href="">Summer Fun!</a>
 
               <ul className="pure-menu-list">
-                  <li className="pure-menu-item pure-menu-selected"><a href="#" className="pure-menu-link">Home</a></li>
-                  <li className="pure-menu-item"><a href="#" className="pure-menu-link">Tour</a></li>
-                  <li className="pure-menu-item"><a href="#" className="pure-menu-link">Sign Up!</a></li>
+                  <li className="pure-menu-item pure-menu-selected"><a href="#home" className="pure-menu-link">Home</a></li>
+                  <li className="pure-menu-item"><a href="#tour" className="pure-menu-link">Tour</a></li>
+                  <li className="pure-menu-item"><a href="#signup" className="pure-menu-link">Sign Up!</a></li>
               </ul>
           </div>
       </div>
 
       <div className="splash-container">
           <div className="splash">
+            <ScrollableAnchor id={'home'}>
               <h1 className="splash-head">SUMMER FUN!</h1>
+              </ScrollableAnchor>
               <p className="splash-subhead">
                 COMPLETE CHALLENGES! HAVE FUN! EARN POINTS AND PRIZES!  CHALLENGE YOUR FRIENDS!
               </p>
@@ -32,7 +35,9 @@ class Home extends Component {
 
       <div className="content-wrapper">
           <div className="content">
+            <ScrollableAnchor id={'tour'}>
               <h2 className="content-head is-center">Get Started</h2>
+            </ScrollableAnchor>
 
               <div className="pure-g">
                   <div className="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -78,7 +83,9 @@ class Home extends Component {
           </div>
 
           <div className="content">
+            <ScrollableAnchor id={'signup'}>
               <h2 className="content-head is-center">REGISTER NOW</h2>
+            </ScrollableAnchor>
       <h1>TODO.... INSERT REGISTER COMPONENT HERE!</h1>
               <div className="pure-g">
                   <div className="l-box-lrg pure-u-1 pure-u-md-2-5">
