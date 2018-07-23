@@ -93,14 +93,17 @@ class Home extends Component {
                           <fieldset>
 
                               <label for="name">Your Name</label>
-                              <input id="name" type="text" placeholder="Your Name" />
+                              <input name="name" type="text" placeholder="Your Name" />
 
 
-                              <label for="email">Your Email</label>
-                              <input id="email" type="email" placeholder="Your Email" />
+                              <label for="email">Your Email (login id)</label>
+                              <input name="email" type="email" placeholder="Your Email" />
+
+                              <label for="Organization">Your Organization</label>
+                              <input name="org" type="text" placeholder="Your Organization" />
 
                               <label for="password">Your Password</label>
-                              <input id="password" type="password" placeholder="Your Password" />
+                              <input name="password" type="password" placeholder="Your Password" />
 
                               <button type="submit" className="pure-button">Sign Up</button>
                           </fieldset>
@@ -108,26 +111,19 @@ class Home extends Component {
                   </div>
 
                   <div className="l-box-lrg pure-u-1 pure-u-md-3-5">
-                      <h4>Contact Us</h4>
+                      <h4>How To Register</h4>
                       <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                          consequat.
-                      </p>
+                        Parents, Caregivers, and Organizations, register for an account for yourself or your organization.
+                        Then add your competitors and challenges, and log progress for your team!
+                                                </p>
 
                       <h4>More Information</h4>
                       <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua.
+                        <a href="mailto:johnstewartco@outlook.com">Contact us</a> for information about customizing SUMMER FUN! for your organization.
                       </p>
                   </div>
               </div>
 
-          </div>
-
-          <div className="footer l-box is-center">
-              View the source of this layout to learn more. Made with love by the YUI Team.
           </div>
 
       </div>
