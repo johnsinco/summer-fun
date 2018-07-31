@@ -17,17 +17,21 @@ class Players extends Component {
     return (
       <Switch>
         <Route exact path='/players' render={(props) => (
-          <div className="players">
-            <header className="players-header">
-              <h3 className="players-title">All Players</h3>
-            </header>
-            <ul>
-              {this.state.players.map(player =>
-                <li>
-                  <Link to={`/players/${player.id}`}>{player.firstName} {player.lastName}</Link>
-                </li>
-              )}
-            </ul>
+          <div className="pure-g">
+          <div className="content">
+            <div className="header">
+              <h3 className="content-head is-center">All Players</h3>
+            </div>
+            <div className="pure-u-5-5">
+              <ul>
+                {this.state.players.map(player =>
+                  <li>
+                    <Link to={`/players/${player.id}`}>{player.firstName} {player.lastName}</Link>
+                  </li>
+                )}
+              </ul>
+            </div>
+          </div>
           </div>
         )}/>
         <Route path='/players/:id/edit' component={EditPlayer} />
