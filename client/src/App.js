@@ -5,6 +5,7 @@ import EditPlayer from './EditPlayer'
 import Challenges from './Challenges'
 import Register from './Register'
 import Home from './Home'
+import MyFun from './MyFun'
 
 class App extends Component {
 
@@ -17,8 +18,8 @@ class App extends Component {
 
                 <ul className="pure-menu-list">
                     <li className="pure-menu-item pure-menu-selected"><a href="#home" className="pure-menu-link">Home</a></li>
-                    <li className="pure-menu-item"><a href="#tour" className="pure-menu-link">Tour</a></li>
-                    <li className="pure-menu-item"><a href="#signup" className="pure-menu-link">Sign Up!</a></li>
+                    <li className="pure-menu-item"><a href="/#tour" className="pure-menu-link">Tour</a></li>
+                    <li className="pure-menu-item"><a href="/#signup" className="pure-menu-link">Sign Up!</a></li>
                 </ul>
             </div>
         </div>
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path='/' component={Home}/>
             <Route path='/players' component={Players}/>
             <Route path='/players/new' component={EditPlayer}/>
+            <Route path='/myfun' component={MyFun}/>
             <Route path='/challenges' component={Challenges}/>
             <Route path='/register' component={Register}/>
           </div>
