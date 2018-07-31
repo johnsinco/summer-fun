@@ -15,21 +15,26 @@ class MyFun extends Component {
       .then(challenges => this.setState({ challenges }));
   }
 
+  markComplete(id) {
+    fetch("/players/"+this.state.player.id+"/challenges/"+id, {
+      method: 'PUT',
+      body: JSON.stringify({meh: 'foo'}),
+      headers: { "Content-Type": "application/json", "Accept": "application/json" }
+    }).then(res => res.json())
+  }
+
   render() {
     var player = this.state.player
     return (
       <div className="playerDetail">
         <header className="players-header">
-          <h3 className="players-title">Player Detail</h3>
+          <h3 className="players-title">How is it going?</h3>
         </header>
-        <div className="playerDetail">
-          {player.firstName} {player.lastName}
-        </div>
-        <Link to={`/players/${player.id}/edit`}>edit</Link>
         <div className="playerChallenges">
           <ul>
           {this.state.challenges.map(c =>
-            <li> {c.name} </li>
+            <li>
+              {c.name} <button onClick={() => this.markComplete(c.id)} className="button-success pure-button">I DID IT!</button></li>
           )}
           </ul>
         </div>

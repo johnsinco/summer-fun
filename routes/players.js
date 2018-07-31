@@ -36,5 +36,11 @@ router.route('/:id/challenges')
   .post(function(req, res, next) {
     res.send('created')
   })
+router.route('/:id/challenges/:id')
+  .put(function(req, res, next) {
+    console.log("setting challenge "+req.params.id+" to COMPLETE")
+    res.status(200).json({foo: 'bar'})
+  });
+
 
 module.exports = router;
