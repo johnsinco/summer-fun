@@ -3,11 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon bin/www",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node ./bin/www",
     "heroku-postbuild": "npm install && cd client && npm install --only-dev && npm install && npm run build"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "concurrently": "^3.6.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "dotenv": "^6.0.0",
