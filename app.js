@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var playersRouter = require('./routes/players');
 var challengesRouter = require('./routes/challenges');
+var familyRouter = require('./routes/family');
 
 var app = express();
 
@@ -26,5 +27,6 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/players', playersRouter);
 app.use('/challenges', challengesRouter);
+app.use('/family', familyRouter);
 
 module.exports = app;

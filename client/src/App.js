@@ -6,6 +6,7 @@ import Challenges from './Challenges'
 import Register from './Register'
 import Home from './Home'
 import MyFun from './MyFun'
+import Family from './Family'
 
 class App extends Component {
 
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path='/players' component={Players}/>
             <Route path='/players/new' component={EditPlayer}/>
             <Route path='/myfun' component={MyFun}/>
+            <Route path='/family' component={Family}/>
             <Route path='/challenges' component={Challenges}/>
             <Route path='/register' component={Register}/>
           </div>
