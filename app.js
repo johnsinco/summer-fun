@@ -6,6 +6,7 @@ const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 const passportJwt = require('passport-jwt').Strategy;
+require('./config/auth');
 
 const indexRouter = require('./routes/index');
 const playersRouter = require('./routes/players');
