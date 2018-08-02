@@ -6,8 +6,8 @@ class Family extends Component {
   state = {players: []}
 
   componentWillMount() {
-    var famid = this.props.match.params.id
-    fetch("/family/"+famid)
+    // var famid = this.props.match.params.id
+    fetch("/family")
       .then(res => res.json())
       .then(players => this.setState({ players }));
   }
